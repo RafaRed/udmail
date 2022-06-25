@@ -38,6 +38,20 @@ npm run
 5. Done
 - Now, the project should be running normally, just access: http://localhost:5000/  
 
+## Possible Updates:
+
+- Add a layer of encryption and security
+- Send Attachments
+- UI and UX improvements and work on responsiveness
+- Possibility to reply to emails
+- View emails sent
+- Delete emails
+- Show if the email has already been read
+- Support more emails, reduce limit
+- Improve project architecture
+
+
+
 ## Contact
 **Discord:**  
 Rafael Souza#2474  
