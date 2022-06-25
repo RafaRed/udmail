@@ -28,7 +28,6 @@ function Mail() {
 function MailBox(props) {
 	var emails = props.emails;
 	var maillist = [];
-	console.log(emails);
 	if (emails !== undefined && emails !== null) {
 		for (const [key, value] of Object.entries(emails)) {
 			maillist.push(
@@ -37,6 +36,7 @@ function MailBox(props) {
 					<p className="subject noselect">{emails[key].subject}</p>
 				</div>
 			);
+			maillist = maillist.reverse();
 		}
 	}
 

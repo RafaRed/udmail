@@ -36,7 +36,6 @@ app.use(function (req, res, next) {
 
 app.post("/create-ud-account", (req, res) => {
 	var _username = req.body.username.replace(".","*");
-	console.log(_username)
     var ref = db.ref("/users/"+_username);
 		ref.once("value", function (snapshot) {
 			var data = snapshot.val();
@@ -54,7 +53,6 @@ app.post("/create-ud-account", (req, res) => {
 
 
 app.post("/sendmessage", (req, res) => {
-	console.log(req.body)
 	var _username = req.body.username.replace(".","*");
 	var _to = req.body.to.replace(".","*");
 	var _subject = req.body.subject;
@@ -88,7 +86,7 @@ app.post("/sendmessage", (req, res) => {
 
 app.post("/getemails", (req, res) => {
 	var _username = req.body.username.replace(".","*");
-    var ref = db.ref("/mails-received/"+_username);
+    var ref = db.ref("/mails-received/"+_username).orderByKey().limitToLast(10);
 		ref.once("value", function (snapshot) {
 			var data = snapshot.val();
 			if (data === null) {
