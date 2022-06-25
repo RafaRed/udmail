@@ -10,7 +10,7 @@ const rateLimit = require("express-rate-limit");
 
 admin.initializeApp({
 	credential: admin.credential.cert(serviceAccount),
-	databaseURL: "https://udmailapp-default-rtdb.firebaseio.com",
+	databaseURL: "https://udmailservice-default-rtdb.firebaseio.com",
 });
 
 //initializeApp();
