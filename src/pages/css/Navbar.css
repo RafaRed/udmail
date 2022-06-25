@@ -1,0 +1,22 @@
+.navbar{
+    background-color: #FBFBFB;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar .logo{
+    font-size: 2.5rem;
+    color: #847AF9;
+    font-weight: 800;
+}
+.navbar .logo span{
+    color: #C4BFFF;
+    font-weight: 400;
+}
+
+.navbar img{
+    width: 300px;
+    height: 40px;
+}
