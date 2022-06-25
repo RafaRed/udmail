@@ -4,6 +4,7 @@ import "../css/SendMail.css"
 import { uauth2 } from "../../components/js/connectors";
 import { postSendMessage } from "../../model/Calls/Database";
 import { UserRejectedRequestError } from "@web3-react/injected-connector";
+import { redirectNonLoggedUser } from "./redirectNonLoggedUser";
 
 function SendMail() {
 
@@ -13,6 +14,7 @@ function SendMail() {
 	
 	return (
 		<div>
+			{redirectNonLoggedUser()}
 			<Navbar></Navbar>
 			<div className="send-mail">
                 <div className="mail-form">

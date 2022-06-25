@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
-import "../css/Mail.css";
+
 import { uauth2 } from "../../components/js/connectors";
 import { getEmails } from "../../model/Calls/Database";
+import { redirectNonLoggedUser } from "./redirectNonLoggedUser";
+import "../css/Mail.css";
 
 function Mail() {
 	const [emails, setEmails] = useState([]);
@@ -11,15 +13,16 @@ function Mail() {
 	}, []);
 	return (
 		<>
+		{redirectNonLoggedUser()}
 			<Navbar />
 			<div className="mail-box">
 				<div className="top-bar">
 					<p>Inbox</p>
-					<button onClick={() => (window.location.href = "/sendmail")}>
-						NEW MAIL
-					</button>
 				</div>
 				<MailBox emails={emails}></MailBox>
+				<a href="/sendmail" className="float">
+				<img src="/images/plus.png" className="my-float"></img>
+				</a>
 			</div>
 		</>
 	);

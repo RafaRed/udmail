@@ -9,7 +9,8 @@
     color: white;
     text-align: center;
     align-content: center;
-    margin-left: 45px;
+    max-width: 200px;
+    margin-left: 90px;
     line-height: 65px;
     pointer-events: none;
     overflow: hidden;

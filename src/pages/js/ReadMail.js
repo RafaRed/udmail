@@ -4,6 +4,7 @@ import "../css/ReadMail.css"
 import { useParams } from "react-router-dom";
 import { uauth2 } from '../../components/js/connectors';
 import { getEmail } from '../../model/Calls/Database';
+import { redirectNonLoggedUser } from './redirectNonLoggedUser';
 
 function ReadMail() {
 	const params = useParams();
@@ -16,6 +17,7 @@ function ReadMail() {
 	},[])
     return (
 		<div>
+			{redirectNonLoggedUser()}
 			<Navbar></Navbar>
 			<div className="read-mail">
                 <div className="mail-form">

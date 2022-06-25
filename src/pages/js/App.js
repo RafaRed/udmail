@@ -1,9 +1,13 @@
 import "../css/App.css";
 import Login from "../../components/js/Login";
+import React, { useState } from "react";
+import { uauth2 } from "../../components/js/connectors";
 
 function App() {
+	
 	return (
 		<div className="App">
+			{isLoggedIn()}
 			<div className="wrapper">
 				<div className="title">
 					<p className="main-title">WELCOME</p>
@@ -21,15 +25,13 @@ function App() {
 	);
 }
 
-function getUdLoginButton(state) {
-	switch (state) {
-		case 0:
-			return "/images/login/ud.png";
-		case 1:
-			return "/images/login/ud-hover.png";
-		case 2:
-			return "/images/login/ud-pressed.png";
-	}
+function isLoggedIn() {
+	uauth2.uauth.user().then((user) => {
+		window.location.href="/mail"
+	}).catch(()=>{
+		return false;
+	});
+	return false;
 }
 
 export default App;

@@ -41,3 +41,17 @@
   color: #ffffff;
   margin-bottom: 10px;
 }
+
+.App .login-text{
+  position: absolute;
+  color: white;
+  text-align: center;
+  align-content: center;
+  max-width: 200px;
+  margin-left: 120px;
+  line-height: 65px;
+  pointer-events: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
