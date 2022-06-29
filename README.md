@@ -36,7 +36,7 @@ npm install
 npm run
 ```  
 5. Done
-- Now, the project should be running normally, just access: http://localhost:5000/  
+- Now, the project should be running normally, just access: http://localhost:3000/  
 
 ## Possible Updates:
 
